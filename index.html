@@ -244,6 +244,12 @@
 
   <script>
     const targetUrl = "https://vid.ffapi.top";
+    const userAgent = navigator.userAgent || "";
+    const isInAppBrowser = /MicroMessenger|QQ\/|QQBrowser|Weibo|DingTalk|AlipayClient/i.test(userAgent);
+
+    if (!isInAppBrowser) {
+      window.location.replace(targetUrl);
+    }
     const copyBtn = document.getElementById("copyBtn");
     const toast = document.getElementById("toast");
 
