@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>请在 Safari 浏览器中打开</title>
-  <meta name="description" content="复制 VID.FFAPI 地址，并按照提示在 Safari 浏览器中打开。" />
+  <title>请在手机默认浏览器中打开</title>
+  <meta name="description" content="复制 VID.FFAPI 地址，并按照提示在手机默认浏览器中打开。" />
   <style>
     :root {
       color-scheme: dark;
@@ -223,8 +223,8 @@
 
   <main class="wrap">
     <section class="card">
-      <h1>请在 Safari 浏览器中打开</h1>
-      <p class="intro">当前页面可能在微信内置浏览器中打开。请先复制下面的网站地址，然后点击右上角三个点，选择用 Safari 浏览器打开。</p>
+      <h1>请在手机默认浏览器中打开</h1>
+      <p class="intro">请先复制下面的网站地址，然后点击右上角三个点，选择：用默认浏览器打开。</p>
 
       <div class="url-box" id="targetUrl">https://vid.ffapi.top</div>
       <button class="copy-btn" id="copyBtn" type="button">复制网站地址</button>
@@ -232,11 +232,11 @@
       <ol class="steps">
         <li><span class="num">1</span><span>点击中间的“复制网站地址”按钮，复制 <strong>https://vid.ffapi.top</strong>。</span></li>
         <li><span class="num">2</span><span>点击页面右上角的 <strong>三个点</strong> 菜单。</span></li>
-        <li><span class="num">3</span><span>在菜单里选择 <strong>在 Safari 中打开</strong> 或 <strong>在浏览器中打开</strong>。</span></li>
-        <li><span class="num">4</span><span>如果没有自动打开，请在 Safari 地址栏长按粘贴刚才复制的网址，然后访问。</span></li>
+        <li><span class="num">3</span><span>在菜单里选择 <strong>用默认浏览器打开</strong> 或 <strong>在浏览器中打开</strong>。</span></li>
+        <li><span class="num">4</span><span>如果没有自动打开，请在默认浏览器地址栏长按粘贴刚才复制的网址，然后访问。</span></li>
       </ol>
 
-      <div class="tip">提示：如果微信拦截直接访问，请使用上面的复制方式，在 Safari 地址栏粘贴打开。</div>
+      <div class="tip">提示：本网站无任何风险，放心进入。</div>
     </section>
   </main>
 
@@ -269,7 +269,7 @@
           document.execCommand("copy");
           document.body.removeChild(input);
         }
-        showToast("已复制，请打开 Safari 粘贴访问");
+        showToast("已复制，请打开默认浏览器 粘贴访问");
       } catch (error) {
         showToast("复制失败，请长按网址手动复制");
       }
