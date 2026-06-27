@@ -1,0 +1,149 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VID.FFAPI</title>
+  <meta name="description" content="VID.FFAPI 快速入口" />
+  <style>
+    :root {
+      color-scheme: light;
+      --bg-start: #dff4ff;
+      --bg-end: #eef9ff;
+      --card: rgba(255, 255, 255, 0.76);
+      --text: #10233f;
+      --muted: #5f7693;
+      --primary: #1778ff;
+      --primary-dark: #0e5ed5;
+      --secondary: #ffffff;
+      --shadow: 0 24px 70px rgba(32, 115, 190, 0.22);
+      --button-shadow: 0 14px 28px rgba(23, 120, 255, 0.28);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255,255,255,.85), transparent 30%),
+        radial-gradient(circle at 82% 78%, rgba(135,210,255,.45), transparent 34%),
+        linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    }
+
+    .shell {
+      width: min(92vw, 560px);
+      padding: clamp(28px, 6vw, 54px);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 32px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      text-align: center;
+    }
+
+    .logo {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #ffffff, #bfeaff);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 16px 32px rgba(38,132,214,.2);
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--primary);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 8vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -0.06em;
+    }
+
+    p {
+      margin: 16px auto 0;
+      max-width: 420px;
+      font-size: clamp(15px, 3.8vw, 18px);
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      appearance: none;
+      border: 0;
+      min-height: 58px;
+      border-radius: 18px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--text);
+      background: var(--secondary);
+      box-shadow: 0 12px 28px rgba(31, 92, 145, 0.12), inset 0 1px 0 rgba(255,255,255,.9);
+      font-size: 16px;
+      font-weight: 750;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .button.primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      box-shadow: var(--button-shadow);
+    }
+
+    .button:hover { transform: translateY(-2px); }
+    .button:active { transform: translateY(0) scale(.98); }
+
+    .note {
+      margin-top: 22px;
+      font-size: 13px;
+      color: rgba(95, 118, 147, .82);
+    }
+
+    @media (max-width: 520px) {
+      body { padding: 18px; }
+      .shell { border-radius: 28px; }
+      .actions { grid-template-columns: 1fr; gap: 12px; }
+      .button { width: 100%; min-height: 56px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell" aria-label="VID.FFAPI 快速入口">
+    <div class="logo" aria-hidden="true">V</div>
+    <h1>VID.FFAPI</h1>
+    <p>一个简洁的公开入口页面，适配手机和电脑屏幕。</p>
+    <div class="actions">
+      <button class="button primary" id="openVid" type="button">打开 VID</button>
+      <a class="button" href="https://vid.ffapi.top" target="_blank" rel="noopener noreferrer">新窗口打开</a>
+    </div>
+    <div class="note">点击按钮将打开 https://vid.ffapi.top</div>
+  </main>
+
+  <script>
+    document.getElementById("openVid").addEventListener("click", function () {
+      window.location.href = "https://vid.ffapi.top";
+    });
+  </script>
+</body>
+</html>
